@@ -1,0 +1,13 @@
+DoomEdNums
+{
+	5022 = GodSatyr
+	22010 = MP5
+    22008 = Grell
+	22009 = AK47
+	22011 = Satyr
+	3276 = dedz
+}
+GameInfo
+{
+   PlayerClasses = "SlowPlayer"
+}

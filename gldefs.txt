@@ -1,0 +1,101 @@
+// GLDefs for Grell
+
+Pointlight GrellShot
+{
+Color 0.0 1.0 0.0
+Size 25
+}
+
+Pointlight GrellShot2
+{
+Color 0.0 1.0 0.0
+Size 30
+}
+
+Pointlight GrellShot3
+{
+Color 0.0 0.7 0.0
+Size 25
+}
+
+Pointlight GrellShot4
+{
+Color 0.0 0.4 0.0
+Size 20
+}
+
+Pointlight GrellShot5
+{
+Color 0.0 0.2 0.0
+Size 15
+}
+
+Object GrellBall
+{
+Frame FVULA { Light GrellShot }
+Frame FVULB { Light GrellShot }
+Frame FVULC { Light GrellShot2 }
+Frame FVULD { Light GrellShot3 }
+Frame FVULE { Light GrellShot4 }
+Frame FVULF { Light GrellShot5 }
+}
+
+BrightMap Sprite GRELE1
+{
+    Map BMGRELE1
+    DisableFullBright
+}
+
+BrightMap Sprite GRELE2E8
+{
+    Map BMGRELE2
+    DisableFullBright
+}
+
+BrightMap Sprite GRELE3E7
+{
+    Map BMGRELE3
+    DisableFullBright
+}
+
+BrightMap Sprite GRELE4E6
+{
+    Map BMGRELE4
+    DisableFullBright
+}
+
+BrightMap Sprite GRELE5
+{
+    Map BMBLACK
+    DisableFullBright
+}
+
+BrightMap Sprite GRELF1
+{
+    Map BMGRELF1
+    DisableFullBright
+}
+
+BrightMap Sprite GRELF2F8
+{
+    Map BMGRELF2
+    DisableFullBright
+}
+
+BrightMap Sprite GRELF3F7
+{
+    Map BMGRELF3
+    DisableFullBright
+}
+
+BrightMap Sprite GRELF4F6
+{
+    Map BMGRELF4
+    DisableFullBright
+}
+
+BrightMap Sprite GRELF5
+{
+    Map BMGRELF5
+    DisableFullBright
+}

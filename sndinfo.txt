@@ -1,0 +1,22 @@
+Weapons/AK47FIR AK47FIR
+cysatyr/sight DSCSTSIT
+cysatyr/active DSCSTACT
+cysatyr/pain DSCSTPAI
+cysatyr/death DSCSTDTH
+
+cysatyr/fire dsshotgn
+Weapons/MP5SATK SCOLTFIR
+satyr/sight dssatsit
+
+satyr/death dssatdth
+
+satyr/bossight scrboss
+
+// SNDINFO for Grell
+grell/sight     dsgresit
+grell/active    dsgreact
+grell/attack    dsgreatk
+grell/pain      dsgrepai
+grell/death     dsgredth
+grell/thud      dsgrethd
+grell/projhit   dsvulhit

@@ -1,0 +1,62 @@
+TEXTURE RFlat40
+    allowdecals
+    pic RFlat40 tics 8
+    pic RFlat41 tics 8
+    pic RFlat42 tics 8
+    pic RFlat43 tics 8
+    pic RFlat42 tics 8
+    pic RFlat41 tics 8
+TEXTURE RMisc28
+    allowdecals
+    pic RMisc28 tics 10
+    pic RMisc29 tics 10
+TEXTURE RMisc42
+    allowdecals
+    pic RMisc42 tics 2
+    pic RMisc43 tics 2
+    pic RMisc44 tics 2
+    pic RMisc45 tics 2
+TEXTURE RMisc46
+    allowdecals
+    pic RMisc46 tics 2
+    pic RMisc47 tics 2
+    pic RMisc48 tics 2
+    pic RMisc49 tics 2
+TEXTURE RMisc50
+    allowdecals
+    pic RMisc50 tics 50
+    pic RMisc51 tics 40
+    pic RMisc52 tics 40
+    pic RMisc53 tics 40
+    pic RMisc54 tics 40
+    pic RMisc55 tics 40
+    pic RMisc56 tics 40
+    pic RMisc57 tics 40
+    pic RMisc58 tics 40
+    pic RMisc59 tics 40
+    pic RMisc60 tics 40
+    pic RMisc61 tics 40
+    pic RMisc62 tics 40
+    pic RMisc63 tics 40
+    pic RMisc64 tics 40
+    pic RMisc65 tics 40
+    pic RMisc66 tics 40
+    pic RMisc67 tics 40
+    pic RMisc68 tics 40
+TEXTURE RRock24
+    allowdecals
+    pic RRock24 tics 11
+    pic RRock25 tics 11
+    pic RRock26 tics 11
+    pic RRock27 tics 11
+    pic RRock26 tics 11
+    pic RRock25 tics 11
+
+Warp flat RFlat44
+Warp flat RFlat184
+Warp flat RFlat185
+Warp flat RFlat186
+Warp flat RFlat187
+Warp flat RFlat188
+Warp flat RFlat189
+Warp flat RFlat190

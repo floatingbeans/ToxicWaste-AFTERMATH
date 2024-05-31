@@ -1,0 +1,114 @@
+actor CySatyr 3109
+{
+	//$Category Monsters
+    Health 500
+    Radius 18
+    Height 50
+    Scale 1.1
+    Speed 8
+    PainChance 95
+    Mass 350
+    MONSTER 
+    +FLOORCLIP
+    SeeSound "satyr/sight"
+    PainSound "cysatyr/pain"
+	AttackSound "cysatyr/fire"
+    DeathSound "cysatyr/death"
+    ActiveSound "cysatyr/active"
+	Obituary "%o was ? by a ?."
+    States
+    {
+    Spawn:
+        CSTY AB 10 A_Look
+        Loop
+    See:
+        CSTY AABBCCDD 3 A_Chase
+        Loop
+    Missile:
+        CSTY E 1 A_FaceTarget
+        CSTY F 1 BRIGHT A_PosAttack
+		CSTY E 5
+		CSTY E 1 A_MonsterRefire (130, "See")
+        Goto Missile+1
+    Pain:
+        CSTY G 2
+        CSTY G 8 A_Pain
+        Goto Missile2
+    Death:
+        CSTY H 5
+        CSTY I 5 A_Scream
+        CSTY J 6
+        CSTY K 7 A_Fall
+        CSTY L 4
+        CSTY M 4
+        CSTY N -1
+        Stop
+    Raise:
+        CSTY NMLKJIH 8
+        Goto See
+	Missile2:
+        CSTY E 1 A_FaceTarget
+        CSTY F 1 BRIGHT A_BruisAttack
+		CSTY E 10
+		CSTY E 1 A_MonsterRefire (130, "See")
+        Goto Missile2+1
+    }
+}
+actor CodSatyr 3110
+{
+	//$Category Monsters
+    Health 5000
+    Radius 48
+    Height 60
+    Scale 2
+    Speed 5
+    PainChance 256
+    Mass 350
+    MONSTER 
+    +FLOORCLIP
+    SeeSound "satyr/sight"
+    PainSound "cysatyr/pain"
+	AttackSound "cysatyr/fire"
+    DeathSound "cysatyr/death"
+    ActiveSound "cysatyr/active"
+	Obituary "%o was ? by a ?."
+    States
+    {
+    Spawn:
+        CSTY AB 10 A_Look
+        Loop
+    See:
+        CSTY AABBCCDD 3 A_Chase
+        Loop
+    Missile:
+        CSTY E 1 A_FaceTarget
+        CSTY F 1 BRIGHT A_SposAttack
+		CSTY E 1
+		CSTY E 1 A_MonsterRefire (130, "See")
+        Goto Missile+1
+    Pain:
+        CSTY G 1 A_Pain
+        Goto Missile2
+    Death:
+        CSTY H 5
+        CSTY I 5 A_Scream
+        CSTY J 6
+        CSTY K 7 A_Fall
+        CSTY L 4
+        CSTY M 4
+        CSTY N -1
+        Stop
+    Raise:
+        CSTY NMLKJIH 8
+        Goto See
+		
+	 Missile2:
+        CSTY E 1 A_FaceTarget
+        CSTY F 1 BRIGHT A_PosAttack
+		CSTY E 1
+		CSTY E 3 A_MonsterRefire (130, "See")
+        Goto Missile2+1
+    }
+}
+
+

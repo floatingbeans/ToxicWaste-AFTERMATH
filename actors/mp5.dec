@@ -1,0 +1,40 @@
+//this weapon will not alert monsters when fired, unless they are within 384 units of the player
+//note that the muzzle flash is included, but disabled by default for realism (see comments below if you want it active)
+Actor MP5 : Weapon
+{
+  //$Category Weapons
+  Obituary "%o was assassinated by %k's suppressed MP5."
+  AttackSound "Weapons/MP5SATK"
+  Inventory.PickupMessage "You got the suppressed MP5 SMG!"
+  Weapon.AmmoType "Clip"
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 20
+  Weapon.SlotNumber 3
+  Decal "BulletChip"
+  +NOALERT
+  states
+  {
+  Ready:
+    MP5S A 1 A_WeaponReady
+    loop
+  Deselect: 
+    MP5S A 1 A_Lower
+    loop
+  Select:
+    MP5S A 1 A_Raise
+    loop
+  Fire:
+	MP5S A 2 //A_GunFlash ("Flash", GFF_NOEXTCHANGE) <--remove the comment in front of this if you want the muzzle flash enabled
+	MP5S B 3 A_FireBullets(4.5, 2.5, 1, 20, "BulletPuff", FBF_USEAMMO | FBF_NOFLASH)
+	TNT1 A 0 A_AlertMonsters(384)
+	MP5S A 3 A_ReFire
+    goto Ready
+  Flash:
+    MP5S C 2 Bright A_Light0
+	MP5S D 2 Bright A_Light0
+	GoTo LightDone
+  Spawn:
+	MP5S I -1
+    stop
+  }
+}

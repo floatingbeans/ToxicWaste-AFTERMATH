@@ -1,0 +1,4 @@
+#include "actors/ak47.dec"
+#include "actors/cysatr.dec"
+#include "actors/mp5.dec"
+#include "actors/player.dec"

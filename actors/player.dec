@@ -1,0 +1,6 @@
+Actor SlowPlayer : DoomPlayer
+{
+Player.ForwardMove 0.5,0.3
+Player.SideMove 0.45,0.25
+Player.JumpZ 4
+}
