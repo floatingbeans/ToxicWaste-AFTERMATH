@@ -27,3 +27,21 @@ GameInfo
 {
    PlayerClasses = "SlowPlayer"
 }
+
+skill dead
+{
+   AmmoFactor = 0.5
+   FastMonsters
+   DisableCheats
+   RespawnTime = 12
+   SpawnFilter = Nightmare
+   Name = "Masochist"
+   MustConfirm = "you do not want this."
+   Key = "x"
+TextColor = red
+  ReplaceActor = "Medikit", "Stimpack"
+  ReplaceActor = "Satyr", "CodSatyr"
+ ReplaceActor = "CySatyr", "CodSatyr"
+ ReplaceActor = "Grell", "Satyr"
+
+}
