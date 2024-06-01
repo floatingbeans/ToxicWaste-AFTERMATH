@@ -1,3 +1,19 @@
+Map MAP01 "Infected Basement" {
+    Music = TORCREEPY1
+	next = MAP02
+	nointermission 
+	
+   
+}
+
+Map MAP02 "Floor 1" {
+    Music = music/UNCANNY
+	next = MAP03
+	nointermission 
+	
+   
+}
+
 DoomEdNums
 {
 	5022 = GodSatyr
