@@ -14,6 +14,12 @@ Map MAP02 "Floor 1" {
    
 }
 
+Map MAP03 "Control Room" {
+Music = TORMATER1
+next = MAP04
+nointermission 
+}
+
 DoomEdNums
 {
 	5022 = GodSatyr

@@ -1,0 +1,14 @@
+actor boom 69420
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  DeathSound "weapons/rocklx" // This will set a "death" sound to play.
+  States
+  {
+    Spawn:
+      MISL B 8 Bright A_Scream // The function A_Scream will play the DeathSound of the actor that we set above.
+      MISL C 6 Bright
+      MISL D 4 Bright
+    Stop
+  }
+}
