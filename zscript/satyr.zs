@@ -61,7 +61,7 @@ Class GodSatyr : Actor
     Scale 2.3;
     Speed 10;
     PainChance 50;
-    Mass 350;
+    Mass 1000;
     SeeSound "satyr/sight";
     PainSound "cysatyr/pain";
     DeathSound "satyr/death";

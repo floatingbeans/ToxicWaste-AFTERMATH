@@ -99,3 +99,14 @@ BrightMap Sprite GRELF5
     Map BMGRELF5
     DisableFullBright
 }
+
+HardwareShader PostProcess beforebloom
+{
+	Name "MBlur"
+	Shader "MBlur.fp" 330
+	Uniform vec2 steps
+	Uniform int samples
+	Uniform float increment
+	Uniform int blendmode
+	//Uniform float dist
+}

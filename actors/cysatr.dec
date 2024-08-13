@@ -63,7 +63,7 @@ actor CodSatyr 3110
     Scale 2
     Speed 5
     PainChance 256
-    Mass 350
+    Mass 1000
     MONSTER 
     +FLOORCLIP
     SeeSound "satyr/sight"

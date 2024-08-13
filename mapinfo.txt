@@ -20,6 +20,12 @@ next = MAP04
 nointermission 
 }
 
+Map MAP04 "Server Room" {
+Music = MATER6
+next = MAP05
+nointermission 
+}
+
 DoomEdNums
 {
 	5022 = GodSatyr
@@ -28,10 +34,15 @@ DoomEdNums
 	22009 = AK47
 	22011 = Satyr
 	3276 = dedz
+	
 }
 GameInfo
 {
-   PlayerClasses = "SlowPlayer"
+AddEventHandlers = "MBlurHandler"
+AddEventHandlers = "NashMoveHandler"
+PlayerClasses = "SlowPlayer"
+
+
 }
 
 skill dead

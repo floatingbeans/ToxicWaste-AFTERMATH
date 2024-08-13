@@ -103,7 +103,7 @@ maps
 			}
 		}
 		defaultfloortexture = "NUKAGE1";
-		defaultceiltexture = "RFLAT135";
+		defaultceiltexture = "RMETL40";
 		defaulttoptexture = "RMETL40";
 		defaultwalltexture = "RMETL40";
 		defaultbottomtexture = "RMETL40";
@@ -119,9 +119,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = 2238.242f;
-		viewpositiony = 503.0721f;
-		viewscale = 1.495725f;
+		viewpositionx = -33.20833f;
+		viewpositiony = -99.92366f;
+		viewscale = 2.527775f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid

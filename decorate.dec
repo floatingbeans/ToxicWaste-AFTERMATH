@@ -2,3 +2,4 @@
 #include "actors/cysatr.dec"
 #include "actors/mp5.dec"
 #include "actors/player.dec"
+#include "actors/shot.dec"
