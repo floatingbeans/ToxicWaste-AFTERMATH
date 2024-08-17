@@ -4,3 +4,5 @@
 #include "actors/player.dec"
 #include "actors/shot.dec"
 #include "actors/factory.dec"
+#include "actors/boom.dec"
+#include "actors/gore.dec"

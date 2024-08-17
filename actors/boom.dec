@@ -1,14 +1,23 @@
-actor boom 69420
+ACTOR boom : Rocket 6942
 {
-  +NOBLOCKMAP
-  +NOGRAVITY
-  DeathSound "weapons/rocklx" // This will set a "death" sound to play.
+  Scale 2
+  SpawnID 6942
+  Radius 0
+  Height 0
+  Speed 0
+  Damage 0
+  +DEHEXPLOSION
+  
   States
   {
-    Spawn:
-      MISL B 8 Bright A_Scream // The function A_Scream will play the DeathSound of the actor that we set above.
-      MISL C 6 Bright
-      MISL D 4 Bright
+  Spawn:
+   goto Death
+   Stop
+  Death:
+    
+    MISL B 8 Bright A_Explode
+    MISL C 6 Bright A_StartSound("weapons/rocklx")
+    MISL D 4 Bright
     Stop
   }
 }

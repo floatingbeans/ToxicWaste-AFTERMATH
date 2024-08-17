@@ -27,6 +27,12 @@ nointermission
 sky1 = RADSKY
 }
 
+Map MAP05 "Boiler Room" {
+    music = ACHE
+    next = MAP06
+    nointermission
+    sky1 = RADSKY
+}
 DoomEdNums
 {
 	5022 = GodSatyr
