@@ -3,3 +3,4 @@
 #include "actors/mp5.dec"
 #include "actors/player.dec"
 #include "actors/shot.dec"
+#include "actors/factory.dec"

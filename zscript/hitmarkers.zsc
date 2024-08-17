@@ -1,0 +1,106 @@
+/*-----------------------\
+   Hitmarkers by Tekish
+\-----------------------*/
+
+class hitmarkersbridge
+{
+	ui private static int getconsoleplayer()
+	{
+		return consoleplayer;
+	}
+
+	ui private static bool getdeath()
+	{
+		playerinfo player = players[consoleplayer];
+
+		if (player.mo is "PlayerChunk")
+			return true;
+
+		return false;
+	}
+
+	ui private static bool getnoautosavehint()
+	{
+		bool noautosavehint;
+
+		if (level.info && level.info.flags2 & LEVEL2_NOAUTOSAVEHINT)
+			noautosavehint = true;
+
+		return noautosavehint;
+	}
+
+	ui private static int gettop()
+	{
+		return statusbar.gettopofstatusbar();
+	}
+
+	ui private static void playsound(sound sound, int channel, int flags, float volume, float attenuation)
+	{
+		s_startsound(sound, channel, flags, volume, attenuation);
+	}
+}
+
+class hitmarkershandler : eventhandler
+{
+	static const name damagenames[] = { "Acid", "Bleeding", "Fire", "Poison" };
+	static const int damagetypes[] = { 4, 2, 3, 5 };
+	static const name targetexceptions[] =
+	{
+		"ExplosiveBarrel1", 				// Brutal Doom, Project Brutality: Explosive Barrel
+		"HeavyMachineGunHitsProjectiles",	// Brutal Doom: Helicopter/Tank Projectiles
+		"SZ_ExplosiveBarrel1",				// Doomzone: Explosive Barrel
+		"SZ_ExplosiveBarrel2",				// Doomzone: Explosive Barrel
+		"SZ_SupplyBarrel"					// Doomzone: Supply Barrel
+	};
+
+	override void worldthingdamaged(worldevent e)
+	{
+		playerinfo player = players[consoleplayer];
+		bool enabled = cvar.getcvar("hm_enabled", player).getbool();
+		bool kill = cvar.getcvar("hm_bridge_kill", player).getbool();
+
+		/*
+		if (e.damage && e.damagesource && e.damagetype && e.thing)
+			console.printf("\nSource: %s\nTarget: %s\nType: %s\nMonster: %d\nDamage: %d\nHealth: %d", e.damagesource.getclassname(), e.thing.getclassname(), e.damagetype, e.thing.bISMONSTER, e.damage, e.thing.health);
+		*/
+
+		if (enabled && !kill && e.damagesource && e.thing && e.damagesource is "PlayerPawn" && e.damagesource.playernumber() == consoleplayer && ((!deathmatch && e.thing.bISMONSTER) || (e.thing is "PlayerPawn" && e.thing.playernumber() != consoleplayer && !e.thing.isteammate(player.mo))))
+		{
+			bool exception;
+
+			for (int i = 0; i < targetexceptions.size(); i++)
+			{
+				if (targetexceptions[i] == e.thing.getclassname())
+				{
+					exception = true;
+					break;
+				}
+			}
+
+			if (!exception)
+			{
+				int type = 1;
+
+				for (int i = 0; i < damagetypes.size(); i++)
+				{
+					if (damagenames[i] == e.damagetype)
+					{
+						if (cvar.getcvar("hm_dot", player).getbool())
+							type = damagetypes[i];
+
+						break;
+					}
+				}
+
+				if (e.thing.health > 0)
+					kill = false;
+				else
+					kill = true;
+
+				cvar.getcvar("hm_bridge_damage", player).setint(cvar.getcvar("hm_bridge_damage", player).getint() + e.damage);
+				cvar.getcvar("hm_bridge_kill", player).setbool(kill);
+				cvar.getcvar("hm_bridge_type", player).setint(type);
+			}
+		}
+	}
+}

@@ -24,9 +24,15 @@ grell/projhit   dsvulhit
 weapons/Xshotgr		XMSGCOCK
 weapons/Xshotgf		XMSHOTGN
 
-MP5FIRE		MP5FIRE
+MP5FIRE		DSPISTOL
 MP5CLIC 	MP5CLIC
 MP5OPEN     MP5OPEN
 MP5CLOS     MP5CLOS
 MP5COCK     MP5COCK
 MP5SLAP     MP5SLAP
+
+modernwarfarehit	HMMWH
+modernwarfarekill	HMMWK
+
+flashlight/on	fshlite1
+flashlight/off	fshlite2

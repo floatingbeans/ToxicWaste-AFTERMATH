@@ -4,7 +4,9 @@ version "4.8.0"
 #include "zscript/dedz.zs"
 #include "zscript/grell.zs"
 #include "zscript/satyr.zs"
-
+#include "shaders.zsc"
+#include "zscript/hitmarkers.zsc"
+#include "zscript/flashlight.zs"
 
 class NashMoveHandler : EventHandler
 {

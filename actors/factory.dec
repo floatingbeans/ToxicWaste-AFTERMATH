@@ -1,0 +1,4 @@
+actor factory : RandomSpawner 1111
+{
+    DropItem "ExplosiveBarrel"
+}

@@ -24,6 +24,7 @@ Map MAP04 "Server Room" {
 Music = MATER6
 next = MAP05
 nointermission 
+sky1 = RADSKY
 }
 
 DoomEdNums
@@ -38,10 +39,11 @@ DoomEdNums
 }
 GameInfo
 {
+    addeventhandlers = "hitmarkershandler"
 AddEventHandlers = "MBlurHandler"
 AddEventHandlers = "NashMoveHandler"
 PlayerClasses = "SlowPlayer"
-
+AddEventHandlers = "ShaderHUDHandler"
 
 }
 

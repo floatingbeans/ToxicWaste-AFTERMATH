@@ -11,3 +11,38 @@ user float mblur_threshold = 30 ;
 user float mblur_recovery2 = 90 ;
 user bool mblur_dynsamps = true ;
 user int mblur_pcurve = 1 ;
+
+
+user bool hm_dot = false;
+user bool hm_dotspeed = false;
+user bool hm_enabled = true;
+user bool hm_hitdamage = true;
+user bool hm_hitsounds = true;
+user bool hm_hitspeed = false;
+user bool hm_killpriority = false;
+user bool hm_killsounds = true;
+user bool hm_killspeed = false;
+user bool hm_showhitmarkers = true;
+user bool hm_showkillmarkers = true;
+user bool hm_soundlimit = false;
+user float hm_fade = 0.75;
+user float hm_fadeanimated = 0.35;
+user int hm_dothit = 2;
+user int hm_dotsound = 0;
+user int hm_dotsounds = 3;
+user int hm_dotstyle = 3;
+user int hm_hitcolor = 0;
+user int hm_hitdamagehigh = 75;
+user int hm_hitdamagemedium = 25;
+user int hm_hitsound = 0;
+user int hm_hitstyle = 0;
+user int hm_killcolor = 0;
+user int hm_killsound = 0;
+user int hm_killstyle = 0;
+user int hm_opacity = 100;
+user int hm_size = 0;
+user int hm_volume = 100;
+
+user noarchive bool hm_bridge_kill;
+user noarchive int hm_bridge_damage;
+user noarchive int hm_bridge_type;

@@ -110,3 +110,28 @@ HardwareShader PostProcess beforebloom
 	Uniform int blendmode
 	//Uniform float dist
 }
+HardwareShader PostProcess screen
+{
+	Name "crt"
+	Shader "shaders/crt.fp" 330
+	Uniform float timer
+}
+pointlight FLASHLIGHT2
+{
+        color 0.7 0.7 0.6
+        size 64
+        offset 0 0 0
+}
+
+pointlight FLASHLIGHT2_2
+{
+        color 0.7 0.7 0.6
+        size 56
+        offset 0 0 0
+}
+
+object FlashLBeam
+{
+           frame TNT1A { light FLASHLIGHT2 }
+           frame TNT1A { light FLASHLIGHT2_2 }
+}
