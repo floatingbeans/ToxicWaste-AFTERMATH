@@ -36,3 +36,8 @@ modernwarfarekill	HMMWK
 
 flashlight/on	fshlite1
 flashlight/off	fshlite2
+sound/ambient/air SADAIR
+
+$alias air sound/ambient/air
+$ambient 1 air point periodic 1.0 0.7
+
