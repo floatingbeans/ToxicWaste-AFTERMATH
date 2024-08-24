@@ -1,0 +1,99 @@
+/*
+
+        Source code for regeneration3.wad script.
+
+         You may use this code for your project
+        as long as you give credit to the author.
+
+                Created by Sr69Mm-jC.
+
+*/
+
+#library "regeneration"
+
+/*
+    Variables:
+    
+    regen_maxhp
+    The code will regenerate your health up to 'regen_maxhp'
+    when your current health is lower than this value.
+    There's no upper limit (dehacked health values do not matter).
+    You can also set this to something as low as maybe 40 so that
+    the regeneration only helps you out when you're badly hurt.
+    
+    regen_pause
+    How long (in tics) it takes for the regeneration to start
+    after you took the damage for the last time. Must be greater than 0.
+    Note: 1 second is roughly 35 tics.
+    
+    regen_step
+    How much health is added on each regeneration step.
+    
+    regen_freq
+    How often the health gets added during the regeneration (in tics).
+    The smaller this value is, the more frequently it heals you up.
+    
+*/
+
+
+#include "zcommon.acs"
+
+int     regen_maxhp  =  100;
+int     regen_pause  =   90; 
+int     regen_step   =    2;
+int     regen_freq   =    6;
+
+#define REGEN_DELAY       5
+
+script 547 OPEN
+{
+    while (true)
+    {
+        if (GetCVar("regen_maxhp") > 0) regen_maxhp = GetCVar("regen_maxhp");
+        if (GetCVar("regen_pause") > 0) regen_pause = GetCVar("regen_pause");
+        if (GetCVar("regen_step" ) > 0) regen_step  = GetCVar("regen_step" );
+        if (GetCVar("regen_freq" ) > 0) regen_freq  = GetCVar("regen_freq" );
+        delay(35);
+    }
+}
+
+script 548 RESPAWN
+{
+    while (GetActorProperty(0,APROP_health) >= regen_maxhp ||
+           GetActorProperty(0,APROP_health) <            0  )
+                delay(REGEN_DELAY);
+    
+    int injury = GetActorProperty(0,APROP_health);
+    int pause  = 0, i, flag = 1;
+    while (GetActorProperty(0,APROP_health) >= injury &&
+           GetActorProperty(0,APROP_health) >       0 &&
+           pause < regen_pause/REGEN_DELAY             )
+           {
+                pause++;
+                delay(REGEN_DELAY);
+           }
+    delay(1);
+    if (pause != regen_pause/REGEN_DELAY) restart;
+
+    int health = GetActorProperty(0,APROP_HEALTH);
+    while (health < regen_maxhp && health > 0 && flag)
+    {
+        if (health + regen_step > regen_maxhp)
+             SetActorProperty(0, APROP_HEALTH, regen_maxhp);
+        else SetActorProperty(0, APROP_HEALTH, health + regen_step);
+        for (i=0; i<regen_freq; i++)
+        {
+            health = GetActorProperty(0,APROP_health);
+            delay(1);
+            if (GetActorProperty(0,APROP_HEALTH) < health) { flag = 0; break; }
+        }
+        health = GetActorProperty(0,APROP_HEALTH);
+    }
+    delay(1);
+    restart;
+}
+
+script 549 ENTER
+{
+    acs_executealways(548, 0);
+}

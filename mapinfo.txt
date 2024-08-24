@@ -33,6 +33,12 @@ Map MAP05 "Boiler Room" {
     nointermission
     sky1 = RADSKY
 }
+Map MAP06 "Emergency Exit" {
+    music = PISS
+    next = MAP07
+    nointermission
+    sky1 = RADSKY
+}
 DoomEdNums
 {
 	5022 = GodSatyr
@@ -50,6 +56,7 @@ AddEventHandlers = "MBlurHandler"
 AddEventHandlers = "NashMoveHandler"
 PlayerClasses = "SlowPlayer"
 AddEventHandlers = "ShaderHUDHandler"
+ForceKillScripts = true
 
 }
 

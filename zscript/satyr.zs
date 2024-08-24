@@ -2,11 +2,11 @@ Class Satyr : Actor
 {
   Default
   {
-    Health 400;
+    Health 300;
     Radius 18;
     Height 48;
     Scale 1.1;
-    Speed 30;
+    Speed 45;
     PainChance 50;
     Mass 350;
     SeeSound "satyr/sight";

@@ -6,3 +6,20 @@
 #include "actors/factory.dec"
 #include "actors/boom.dec"
 #include "actors/gore.dec"
+#include BLOOD.txt //Blood actors
+#include MEAT.txt //Gib actors
+#include SERVING.txt //Gore Groups (spawns gibs and blood when enemies explodes)
+#include "actors/shotgun2.dec"
+
+//These are inventory tokens required for several things.
+Actor IsOverWater : Inventory{inventory.maxamount 1}
+Actor IsOverSlime : Inventory{inventory.maxamount 1}
+Actor IsOverSludge : Inventory{inventory.maxamount 1}
+Actor IsOverBlood : Inventory{inventory.maxamount 1}
+Actor IsOverNukage : Inventory{inventory.maxamount 1}
+Actor AnimuGore : Inventory{inventory.maxamount 1}
+Actor IsOverLava : Inventory{inventory.maxamount 1}
+Actor LowGraphicsMode : Inventory{inventory.maxamount 1}
+Actor IsOverSlimy : Inventory{inventory.maxamount 1}
+
+
