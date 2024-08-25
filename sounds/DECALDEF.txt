@@ -1,0 +1,63 @@
+fader BlightlordSlimeFade
+{
+   DecayStart 0.5
+   DecayTime 0.5
+}
+
+stretcher BlightlordSlimeStretch
+{
+   GoalX 0.47
+   GoalY 0.47
+   StretchStart 0.5
+   StretchTime 1.0
+}
+
+Combiner BlightlordSlimeAnim
+{
+	BlightlordSlimeFade
+	BlightlordSlimeStretch
+}
+
+decal BlightlordSlimeScorch1
+{
+	pic VBLSSCR1
+	shade "60 ff 60"
+	x-scale 0.5
+	y-scale 0.5
+	randomflipx
+	randomflipy
+	fullbright
+	animator BlightlordSlimeAnim
+}
+
+decal BlightlordSlimeScorch2
+{
+	pic VBLSSCR2
+	shade "60 ff 60"
+	x-scale 0.5
+	y-scale 0.5
+	randomflipx
+	randomflipy
+	fullbright
+	animator BlightlordSlimeAnim
+
+}
+
+decal BlightlordSlimeScorch3
+{
+	pic VBLSSCR3
+	shade "60 ff 60"
+	x-scale 0.5
+	y-scale 0.5
+	randomflipx
+	randomflipy
+	fullbright
+	animator BlightlordSlimeAnim
+}
+
+decalgroup BlightlordSlimeScorch
+{
+	BlightlordSlimeScorch1	1
+	BlightlordSlimeScorch2	1
+	BlightlordSlimeScorch3	1
+}

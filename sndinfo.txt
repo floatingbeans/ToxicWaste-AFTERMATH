@@ -109,3 +109,47 @@ $rolloff blooddrop3 10 400
 
 SWATSHOT XMSHOTGN
 SWATREL SWATREL
+
+Blightlord/attack1	VBLIATK1
+Blightlord/attack2	VBLIATK2
+Blightlord/attack3	VBLIATK3
+Blightlord/attack4	VBLIATK4
+Blightlord/see	VBLISEE
+Blightlord/death	VBLIDETH
+$random Blightlord/pain { Blightlordpain1 Blightlordpain2 Blightlordpain2 }
+Blightlordpain1	VBLIPAI1
+Blightlordpain2	VBLIPAI2
+Blightlordpain3	VBLIPAI3
+$random Blightlord/act { Blightlordact1 Blightlordact2 }
+Blightlordact1	VBLIACT1
+Blightlordact2	VBLIACT2
+Blightlord/slime	VBLISLM1
+Blightlord/slimesplat	VBLISLM2
+$pitchset Blightlord/attack1 0.667 0.766
+$pitchset Blightlord/attack2 0.667 0.766
+$pitchset Blightlord/attack3 0.667 0.766
+$pitchset Blightlord/attack4 0.667 0.766
+$pitchset Blightlord/see 0.667 0.766
+$pitchset Blightlordact1 0.667 0.766
+$pitchset Blightlordact2 0.667 0.766
+$pitchset Blightlordpain1 0.667 0.766
+$pitchset Blightlordpain2 0.667 0.766
+$pitchset Blightlordpain3 0.667 0.766
+$pitchset Blightlord/death 0.667 0.766
+$pitchset Blightlord/slime 0.75 1.5
+$pitchset Blightlord/slimesplat 0.9 1.1
+$volume Blightlord/slime 0.5
+$volume Blightlord/slimesplat 0.5
+$limit Blightlord/slime 0
+$limit Blightlord/slimesplat 0
+
+$random BlightlordWasp/buzz { BlightlordWasp1 BlightlordWasp2 }
+BlightlordWasp1	VBLIWSP1
+BlightlordWasp2	VBLIWSP2
+BlightlordWasp3	VBLIWSP3
+BlightlordWasp/death	VBLIWSP4
+$pitchset BlightlordWasp/death 0.667 0.766
+$volume BlightlordWasp/death 0.5
+$limit BlightlordWasp1 3
+$limit BlightlordWasp2 3
+$limit BlightlordWasp3 3

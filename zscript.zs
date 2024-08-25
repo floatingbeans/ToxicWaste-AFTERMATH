@@ -1,6 +1,6 @@
 // toxic waste aftermath
 version "4.8.0"
-
+#include "zscript/blight.zs"
 #include "zscript/dedz.zs"
 #include "zscript/grell.zs"
 #include "zscript/satyr.zs"

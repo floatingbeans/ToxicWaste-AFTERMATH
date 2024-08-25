@@ -135,3 +135,102 @@ object FlashLBeam
            frame TNT1A { light FLASHLIGHT2 }
            frame TNT1A { light FLASHLIGHT2_2 }
 }
+Pointlight BlightlordAttackLight
+{
+	color 0.5 1.0 0.5
+	size 60
+	offset 0 0 0
+}
+Object Blightlord
+{
+	Frame VBLII	{Light BlightlordAttackLight}
+	Frame VBLIJ	{Light BlightlordAttackLight}
+	Frame VBLIK	{Light BlightlordAttackLight}
+	Frame VBLIR	{Light BlightlordAttackLight}
+	Frame VBLIS	{Light BlightlordAttackLight}
+	Frame VBLIT	{Light BlightlordAttackLight}
+}
+
+Pointlight BlightlordCloudLight
+{
+	color 0.1 0.25 0.1
+	size 24
+	offset 0 0 0
+}
+Object BlightlordToxiccloud
+{
+	Frame VBLC	{Light BlightlordCloudLight}
+}
+
+Pointlight BlightlordSlimeLight
+{
+	color 0.2 0.6 0.2
+	size 24
+	offset 0 0 0
+}
+Object BlightlordSlime
+{
+	Frame VBLS	{Light BlightlordSlimeLight}
+}
+
+BrightMap Sprite VWSPA1		{ Map VWSPA1 }
+BrightMap Sprite VWSPB1		{ Map VWSPB1 }
+BrightMap Sprite VWSPA2A8	{ Map VWSPA2A8 }
+BrightMap Sprite VWSPB2B8	{ Map VWSPB2B8 }
+BrightMap Sprite VWSPA3A7	{ Map VWSPA3A7 }
+BrightMap Sprite VWSPB3B7	{ Map VWSPB3B7 }
+BrightMap Sprite VWSPA4A6	{ Map VWSPA4A6 }
+
+BrightMap Sprite VBLIA1		{ Map VBLIA1 }
+BrightMap Sprite VBLIB1		{ Map VBLIB1 }
+BrightMap Sprite VBLIC1		{ Map VBLIC1 }
+BrightMap Sprite VBLID1		{ Map VBLID1 }
+BrightMap Sprite VBLIE1		{ Map VBLIE1 }
+BrightMap Sprite VBLIF1		{ Map VBLIF1 }
+BrightMap Sprite VBLIG1		{ Map VBLIG1 }
+BrightMap Sprite VBLII1		{ Map VBLII1 }
+BrightMap Sprite VBLIJ1		{ Map VBLIJ1 }
+BrightMap Sprite VBLIK1		{ Map VBLIK1 }
+BrightMap Sprite VBLIR1		{ Map VBLIR1 }
+BrightMap Sprite VBLIS1		{ Map VBLIS1 }
+BrightMap Sprite VBLIT1		{ Map VBLIT1 }
+
+BrightMap Sprite VBLIA2A8	{ Map VBLIA2A8 }
+BrightMap Sprite VBLIB2B8	{ Map VBLIB2B8 }
+BrightMap Sprite VBLIC2C8	{ Map VBLIC2C8 }
+BrightMap Sprite VBLID2D8	{ Map VBLID2D8 }
+BrightMap Sprite VBLIE2E8	{ Map VBLIE2E8 }
+BrightMap Sprite VBLIF2F8	{ Map VBLIF2F8 }
+BrightMap Sprite VBLIG2G8	{ Map VBLIG2G8 }
+BrightMap Sprite VBLII2I8	{ Map VBLII2I8 }
+BrightMap Sprite VBLIJ2J8	{ Map VBLIJ2J8 }
+BrightMap Sprite VBLIK2K8	{ Map VBLIK2K8 }
+BrightMap Sprite VBLIR2R8	{ Map VBLIR2R8 }
+BrightMap Sprite VBLIS2S8	{ Map VBLIS2S8 }
+BrightMap Sprite VBLIT2T8	{ Map VBLIT2T8 }
+
+BrightMap Sprite VBLIA3A7	{ Map VBLIA3A7 }
+BrightMap Sprite VBLIB3B7	{ Map VBLIB3B7 }
+BrightMap Sprite VBLIC3C7	{ Map VBLIC3C7 }
+BrightMap Sprite VBLID3D7	{ Map VBLID3D7 }
+BrightMap Sprite VBLIE3E7	{ Map VBLIE3E7 }
+BrightMap Sprite VBLIF3F7	{ Map VBLIF3F7 }
+BrightMap Sprite VBLIG3G7	{ Map VBLIG3G7 }
+BrightMap Sprite VBLII3I7	{ Map VBLII3I7 }
+BrightMap Sprite VBLIK3K7	{ Map VBLIK3K7 }
+BrightMap Sprite VBLIR3R7	{ Map VBLIR3R7 }
+BrightMap Sprite VBLIS3S7	{ Map VBLIS3S7 }
+BrightMap Sprite VBLIT3T7	{ Map VBLIT3T7 }
+
+BrightMap Sprite VBLIA4A6	{ Map VBLIA4A6 }
+BrightMap Sprite VBLIB4B6	{ Map VBLIB4B6 }
+BrightMap Sprite VBLIC4C6	{ Map VBLIC4C6 }
+BrightMap Sprite VBLIE4E6	{ Map VBLIE4E6 }
+BrightMap Sprite VBLIF4F6	{ Map VBLIF4F6 }
+BrightMap Sprite VBLII4I6	{ Map VBLII4I6 }
+BrightMap Sprite VBLIK4K6	{ Map VBLIK4K6 }
+BrightMap Sprite VBLIR4R6	{ Map VBLIR4R6 }
+BrightMap Sprite VBLIS4S6	{ Map VBLIS4S6 }
+
+BrightMap Sprite VBLIS5		{ Map VBLIR5 }
+BrightMap Sprite VBLIT5		{ Map VBLIT5 }
