@@ -6,10 +6,10 @@ Class Blightlord : Actor
 		//$Title "Wasp Satyr"
 		Health 1400;
 		Radius 20;
-		Height 78;
-		Scale 1.2;
+		Height 85;
+		Scale 0.95;
 		Mass 800;
-		Speed 56;
+		Speed 60;
 		PainChance 64;
 		MeleeRange 56;
 		DamageType "Poison";
