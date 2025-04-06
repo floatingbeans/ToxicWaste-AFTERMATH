@@ -39,6 +39,16 @@ Map MAP06 "Emergency Exit" {
     nointermission
     sky1 = RADSKY
 }
+map MAP07 "Sewer Escape Plan" {
+	next = MAP08
+	music = COCK
+	nointermission 
+	sky1 = RADSKY
+}
+map MAP08 "The End" {
+	nointermission 
+	sky1 = SKYEND
+}
 DoomEdNums
 {
 	5022 = GodSatyr

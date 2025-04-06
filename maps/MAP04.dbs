@@ -14,7 +14,7 @@ maps
 			resource0
 			{
 				type = 1;
-				location = "C:\\Users\\skele\\Documents\\GitHub\\ToxicWaste-AFTERMATH";
+				location = "C:\\Users\\skele\\OneDrive\\Documents\\GitHub\\ToxicWaste-AFTERMATH";
 				option1 = 0;
 				option2 = 0;
 				notfortesting = 0;
@@ -38,9 +38,9 @@ maps
 		overrideceilheight = false;
 		overridebrightness = false;
 		uselongtexturenames = false;
-		viewpositionx = -390.4378f;
-		viewpositiony = -2189.246f;
-		viewscale = 1.098499f;
+		viewpositionx = -922.124f;
+		viewpositiony = -2505.624f;
+		viewscale = 1.856463f;
 		scriptcompiler = "zdoom_acs.cfg";
 		
 		grid
